@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:posha/utils/helpers.dart';
 
 import '../../../blocs/adopt/adopt_bloc.dart';
 import '../../../blocs/adopt/adopt_state.dart';
@@ -16,7 +17,7 @@ class PetTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = THelperFunctions.screenSize(context);
     final theme = Theme.of(context);
 
     return BlocBuilder<AdoptionBloc, AdoptionState>(
