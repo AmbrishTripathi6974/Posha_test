@@ -19,7 +19,7 @@ class CustomSearchBar extends StatelessWidget {
         decoration: InputDecoration(
           hintText: "Search your favourite pet...",
           prefixIcon: const Icon(Icons.search, color: Colors.yellow),
-          hintStyle: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily, fontSize: 12),
+          hintStyle: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily, fontSize: 12, color: Colors.black54),
           suffixIcon: IconButton(
             icon: const Icon(Icons.mic_none_rounded),
             onPressed: () {},
