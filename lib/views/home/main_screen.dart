@@ -21,13 +21,15 @@ class MainScreen extends StatelessWidget {
     final theme = Theme.of(context);
     return BlocBuilder<NavCubit, int>(
       builder: (context, selectedIndex) {
-        return Scaffold(
-          backgroundColor: theme.scaffoldBackgroundColor,
-          body: IndexedStack(
-            index: selectedIndex,
-            children: _screens,
+        return SafeArea(
+          child: Scaffold(
+            backgroundColor: theme.scaffoldBackgroundColor,
+            body: IndexedStack(
+              index: selectedIndex,
+              children: _screens,
+            ),
+            bottomNavigationBar: const CustomBottomNav(),
           ),
-          bottomNavigationBar: const CustomBottomNav(),
         );
       },
     );
