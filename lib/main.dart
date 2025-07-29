@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final petRepository = PetRepository(localStorage); // ← now it works
+    final petRepository = PetRepository(localStorage);
 
     return MultiBlocProvider(
       providers: [

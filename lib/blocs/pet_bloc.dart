@@ -31,7 +31,6 @@ class PetBloc extends Bloc<PetEvent, PetState> {
       final isEnd = newPets.length < _limit;
       _currentPage++;
 
-      // Avoid duplicates in _allPets
       for (final pet in newPets) {
         if (!_allPets.any((p) => p.name == pet.name)) {
           _allPets.add(pet);
