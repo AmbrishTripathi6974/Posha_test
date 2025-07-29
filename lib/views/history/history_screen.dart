@@ -22,14 +22,12 @@ class HistoryScreen extends StatelessWidget {
           return CustomScrollView(
             slivers: [
               SliverAppBar(
-                backgroundColor: Colors.white,
                 pinned: true,
                 elevation: 2,
                 centerTitle: true,
                 title: const Text(
                   "Adopted Pets",
                   style: TextStyle(
-                    color: black,
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                   ),

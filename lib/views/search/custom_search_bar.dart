@@ -16,6 +16,7 @@ class CustomSearchBar extends StatelessWidget {
         onChanged: (value) {
           context.read<PetBloc>().add(SearchPets(value));
         },
+        style: const TextStyle(color: Colors.black87),
         decoration: InputDecoration(
           hintText: "Search your favourite pet...",
           prefixIcon: const Icon(Icons.search, color: Colors.yellow),

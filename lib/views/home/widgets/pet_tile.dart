@@ -98,7 +98,7 @@ class PetTile extends StatelessWidget {
                               '${cat.name}_${cat.image}_${cat.hashCode}', // ✅ Unique per widget
                           child: Image.asset(
                             cat.image,
-                            height: size.height * 0.22,
+                            height: size.height * 0.16,
                           ),
                         ),
                       ),

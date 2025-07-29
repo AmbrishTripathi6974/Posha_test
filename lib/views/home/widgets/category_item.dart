@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../core/constants.dart';
 import '../../../models/pet_model.dart';
 import '../../../blocs/category_cubit.dart';
 
@@ -11,6 +9,7 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
 
     return BlocBuilder<CategoryCubit, int>(
       builder: (context, selectedCategory) {
@@ -25,9 +24,9 @@ class CategoryItem extends StatelessWidget {
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.black12.withOpacity(0.03),
+                  color: colorScheme.surfaceVariant.withOpacity(0.1),
                 ),
-                child: const Icon(Icons.tune_rounded),
+                child: Icon(Icons.tune_rounded, color: colorScheme.onSurface),
               ),
               ...List.generate(
                 categories.length,
@@ -45,16 +44,16 @@ class CategoryItem extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: selectedCategory == index
-                            ? buttonColor
-                            : Colors.black12.withOpacity(0.03),
+                            ? colorScheme.primary
+                            : colorScheme.surfaceVariant.withOpacity(0.1),
                       ),
                       child: Text(
                         categories[index],
                         style: theme.textTheme.bodyMedium?.copyWith(
                           fontSize: 16,
                           color: selectedCategory == index
-                              ? Colors.white
-                              : black,
+                              ? colorScheme.onPrimary
+                              : colorScheme.onSurface,
                         ),
                       ),
                     ),
